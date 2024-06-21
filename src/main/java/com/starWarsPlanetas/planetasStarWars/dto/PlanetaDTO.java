@@ -1,8 +1,14 @@
 package com.starWarsPlanetas.planetasStarWars.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
+@Schema(description = "Dados necessários para cadastrar um planeta")
 public class PlanetaDTO {
+    @Schema(description = "Nome do planeta", required = true)
     private String nome;
+    @Schema(description = "Clima do planeta", required = true)
     private String clima;
+    @Schema(description = "Terreno do planeta", required = true)
     private String terreno;
 
     public PlanetaDTO(String nome, String clima, String terreno) {
